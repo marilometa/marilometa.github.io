@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Marilo Meta — Salesforce MVP & CRM Architect</title>
-<meta name="description" content="Portfolio of Marilo Meta — Salesforce MVP, Application Architect, 21x Certified Consultant & Digital Transformation Advisor based in Washington, DC." />
+<title>Marilo Meta: Salesforce MVP & CRM Architect</title>
+<meta name="description" content="Portfolio of Marilo Meta: Salesforce MVP, Application Architect, 21x Certified Consultant & Digital Transformation Advisor based in Washington, DC." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
   --mono:"JetBrains Mono", monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
 body{
   background:var(--ink);
   color:var(--paper);
@@ -77,9 +77,45 @@ body::before{
   text-decoration:none;transition:all .2s;
 }
 .nav-cta:hover{background:var(--accent);color:var(--paper)}
+.nav-toggle{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  width:32px;height:32px;
+  background:none;border:none;cursor:pointer;
+  padding:0;
+}
+.nav-toggle span{
+  display:block;width:100%;height:1px;
+  background:var(--paper);transition:all .25s;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:rgba(30,58,92,0.98);
+  border-top:1px solid var(--rule);
+  padding:8px 24px 24px;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  color:var(--paper-mute);text-decoration:none;
+  font-family:var(--mono);font-size:14px;letter-spacing:0.04em;
+  text-transform:uppercase;
+  padding:16px 0;border-bottom:1px solid var(--rule);
+}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu .mobile-cta{
+  color:var(--accent);margin-top:8px;
+}
 @media(max-width:820px){
   .nav-inner{padding:14px 24px}
   .nav-links{display:none}
+  .nav-cta{display:none}
+  .nav-toggle{display:flex}
 }
 
 /* ───────────────────────── hero ───────────────────────── */
@@ -87,6 +123,7 @@ body::before{
   padding:180px 0 120px;
   position:relative;
   border-bottom:1px solid var(--rule);
+  overflow:hidden;
 }
 .hero::after{
   content:"";position:absolute;right:-200px;top:80px;width:600px;height:600px;
@@ -313,6 +350,9 @@ blockquote{
   gap:24px;padding:20px 0;
   border-bottom:1px solid var(--rule);
 }
+@media(max-width:620px){
+  .recog-item{grid-template-columns:1fr;gap:6px}
+}
 .recog-item:first-child{border-top:1px solid var(--rule-strong)}
 .recog-year{
   font-family:var(--mono);font-size:12px;letter-spacing:0.08em;
@@ -328,6 +368,7 @@ blockquote{
   border:1px solid var(--rule-strong);
 }
 @media(max-width:760px){.speak-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.speak-grid{grid-template-columns:1fr}}
 .speak{
   background:var(--ink);
   padding:32px 24px;
@@ -352,6 +393,7 @@ blockquote{
 .contact{
   padding:160px 0 80px;
   position:relative;
+  overflow:hidden;
 }
 .contact::before{
   content:"";position:absolute;left:-200px;bottom:0;width:600px;height:600px;
@@ -420,6 +462,16 @@ footer{
       <a href="#contact">Contact</a>
     </div>
     <a href="#contact" class="nav-cta">Start a project</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#work">Work</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#recognition">Recognition</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="mobile-cta">Start a project</a>
   </div>
 </nav>
 
@@ -430,7 +482,7 @@ footer{
     <h1 class="name reveal reveal-d2">Salesforce<br/>MVP &amp;<br/><em>CRM Architect.</em></h1>
     <div class="hero-sub">
       <p class="tagline reveal reveal-d3">
-        I help organizations turn Salesforce from a system of record into a <strong>system of outcomes</strong> — pipeline accelerated, working capital freed, operations rebuilt.
+        I help organizations turn Salesforce from a system of record into a <strong>system of outcomes</strong>: pipeline accelerated, working capital freed, operations rebuilt.
       </p>
       <div class="hero-meta reveal reveal-d4">
         <div class="hero-meta-row"><span>Based</span><span>Washington, DC</span></div>
@@ -462,25 +514,25 @@ footer{
       <div class="section-num">01 / Practice</div>
       <div>
         <h2 class="section-title">A practice built for the gap between <em>vision</em> and <em>adoption.</em></h2>
-        <p class="section-lede">Most Salesforce engagements fail at the seams — discovery vs. delivery, sponsor vs. user, architecture vs. operations. I work along those seams.</p>
+        <p class="section-lede">Most Salesforce engagements fail at the seams: discovery vs. delivery, sponsor vs. user, architecture vs. operations. I work along those seams.</p>
       </div>
     </div>
 
     <div class="services">
       <div class="svc reveal">
-        <div class="svc-num">A — Architecture</div>
+        <div class="svc-num">A: Architecture</div>
         <h3 class="svc-title">CRM architecture &amp; automation that holds up under scrutiny.</h3>
         <p class="svc-body">Data models, sharing &amp; visibility, declarative automation (Flow Builder, validation rules, App Builder), and integration design aligned with the Salesforce Well-Architected Framework.</p>
       </div>
       <div class="svc reveal reveal-d2">
-        <div class="svc-num">B — Strategy</div>
+        <div class="svc-num">B: Strategy</div>
         <h3 class="svc-title">Discovery, process design &amp; value roadmaps.</h3>
         <p class="svc-body">Executive workshops, future-state agentic visions, no-code POCs that prove value in 4–6 weeks, and multi-year roadmaps that AEs and CFOs both can defend.</p>
       </div>
       <div class="svc reveal reveal-d3">
-        <div class="svc-num">C — Adoption</div>
+        <div class="svc-num">C: Adoption</div>
         <h3 class="svc-title">Change, enablement &amp; long-term account health.</h3>
-        <p class="svc-body">Role-based enablement, release communications, executive briefings, and governance models that hold post-go-live — measured in sustained feature usage, not handoff signatures.</p>
+        <p class="svc-body">Role-based enablement, release communications, executive briefings, and governance models that hold post-go-live: measured in sustained feature usage, not handoff signatures.</p>
       </div>
     </div>
 
@@ -513,7 +565,7 @@ footer{
       <div class="section-num">02 / Work</div>
       <div>
         <h2 class="section-title">Selected <em>case studies.</em></h2>
-        <p class="section-lede">Engagements across recruitment, healthcare, public sector, financial services and biotech analytics — measured by what changed for the business, not what was deployed.</p>
+        <p class="section-lede">Engagements across recruitment, healthcare, public sector, financial services and biotech analytics: measured by what changed for the business, not what was deployed.</p>
       </div>
     </div>
 
@@ -524,7 +576,7 @@ footer{
         <div class="case-content">
           <div class="case-industry">Recruitment · Sales Cloud</div>
           <h3>From spreadsheets to a candidate engine.</h3>
-          <p class="case-desc">A regional recruitment agency ran candidate data on spreadsheets and email threads. Built <strong>Sales Cloud</strong> with custom candidate and job objects, approval automation, and Gmail integration — moving the team to a single source of truth in weeks, not quarters.</p>
+          <p class="case-desc">A regional recruitment agency ran candidate data on spreadsheets and email threads. Built <strong>Sales Cloud</strong> with custom candidate and job objects, approval automation, and Gmail integration, moving the team to a single source of truth in weeks, not quarters.</p>
         </div>
         <div class="case-impact">
           <div class="impact-item"><span class="impact-num">40%</span><span class="impact-label">Faster hiring cycle</span></div>
@@ -538,7 +590,7 @@ footer{
         <div class="case-content">
           <div class="case-industry">Public Sector · Service Cloud</div>
           <h3>Citizen requests, finally legible.</h3>
-          <p class="case-desc">National public agency needed a unified CRM for citizen requests and internal cases. Deployed <strong>Service Cloud</strong> with automated workflows and a self-service portal — closing the gap between departments and creating an auditable trail end-to-end.</p>
+          <p class="case-desc">National public agency needed a unified CRM for citizen requests and internal cases. Deployed <strong>Service Cloud</strong> with automated workflows and a self-service portal, closing the gap between departments and creating an auditable trail end-to-end.</p>
         </div>
         <div class="case-impact">
           <div class="impact-item"><span class="impact-num">35%</span><span class="impact-label">Faster case resolution</span></div>
@@ -551,7 +603,7 @@ footer{
         <div class="case-content">
           <div class="case-industry">Healthcare · Service Cloud</div>
           <h3>Triage that earns clinicians their time back.</h3>
-          <p class="case-desc">Healthcare organization buried in patient inquiries and referral workflows. Built <strong>Service Cloud triage automation</strong> and referral routing — administrative drag down, communication accuracy up, reporting credible to leadership for the first time.</p>
+          <p class="case-desc">Healthcare organization buried in patient inquiries and referral workflows. Built <strong>Service Cloud triage automation</strong> and referral routing: administrative drag down, communication accuracy up, reporting credible to leadership for the first time.</p>
         </div>
         <div class="case-impact">
           <div class="impact-item"><span class="impact-num">30%</span><span class="impact-label">Less admin workload</span></div>
@@ -564,7 +616,7 @@ footer{
         <div class="case-content">
           <div class="case-industry">Financial Services · Sales Cloud</div>
           <h3>Loan deals you can actually forecast.</h3>
-          <p class="case-desc">Loan data scattered across three systems and a finance team flying blind. Implemented <strong>Sales Cloud</strong> with automated lead assignment, approval flows, and accounting integration — collapsing the pipeline-to-finance gap into a single dashboard.</p>
+          <p class="case-desc">Loan data scattered across three systems and a finance team flying blind. Implemented <strong>Sales Cloud</strong> with automated lead assignment, approval flows, and accounting integration, collapsing the pipeline-to-finance gap into a single dashboard.</p>
         </div>
         <div class="case-impact">
           <div class="impact-item"><span class="impact-num">25%</span><span class="impact-label">Faster deal approvals</span></div>
@@ -576,8 +628,8 @@ footer{
         <div class="case-num">05</div>
         <div class="case-content">
           <div class="case-industry">Biotech Analytics · Sales Cloud Stabilization</div>
-          <h3>From at-risk go-live to executive sign-off — in two weeks.</h3>
-          <p class="case-desc">Time-critical Sales Cloud engagement at <strong>MiBA Analytics</strong>. Took over as delivery lead and Salesforce admin, prioritized backlog, ran daily stand-ups, configured forecasting reports and page layouts, validated permissions, and supported UAT — securing executive approval inside fourteen days.</p>
+          <h3>From at-risk go-live to executive sign-off in two weeks.</h3>
+          <p class="case-desc">Time-critical Sales Cloud engagement at <strong>MiBA Analytics</strong>. Took over as delivery lead and Salesforce admin, prioritized backlog, ran daily stand-ups, configured forecasting reports and page layouts, validated permissions, and supported UAT, securing executive approval inside fourteen days.</p>
         </div>
         <div class="case-impact">
           <div class="impact-item"><span class="impact-num">2 wks</span><span class="impact-label">To executive sign-off</span></div>
@@ -590,7 +642,7 @@ footer{
         <div class="case-content">
           <div class="case-industry">RevOps · Lead &amp; Contact Scoring</div>
           <h3>Scoring that sales actually trusts.</h3>
-          <p class="case-desc">Delivered revenue analytics and Lead/Contact scoring for <strong>MapleDX</strong> via sprint-based execution — backlog grooming, sprint planning, demos, stakeholder loops. Aligned the data model, automation, and reporting to defined business metrics and governance, so sales and marketing share one operating picture.</p>
+          <p class="case-desc">Delivered revenue analytics and Lead/Contact scoring for <strong>MapleDX</strong> via sprint-based execution: backlog grooming, sprint planning, demos, stakeholder loops. Aligned the data model, automation, and reporting to defined business metrics and governance, so sales and marketing share one operating picture.</p>
         </div>
         <div class="case-impact">
           <div class="impact-item"><span class="impact-num">↑</span><span class="impact-label">Pipeline visibility</span></div>
@@ -618,44 +670,44 @@ footer{
         <blockquote>
           The Salesforce MVP program recognizes exceptional individuals within the community for their leadership, knowledge, and ongoing contributions.
         </blockquote>
-        <div class="quote-attr">— Salesforce, on the MVP designation</div>
+        <div class="quote-attr">Salesforce, on the MVP designation</div>
       </div>
       <div class="recog-list">
         <div class="recog-item">
-          <div class="recog-year">2022 — present</div>
+          <div class="recog-year">2022 to Present</div>
           <div class="recog-text">Salesforce MVP<span>Recognized for sustained ecosystem contribution</span></div>
         </div>
         <div class="recog-item">
           <div class="recog-year">2026</div>
-          <div class="recog-text">Salesforce Application Architect<span>Domain architect designation — Data, Sharing &amp; Visibility, App Builder, Developer I</span></div>
+          <div class="recog-text">Salesforce Application Architect<span>Domain architect designation: Data, Sharing &amp; Visibility, App Builder, Developer I</span></div>
         </div>
         <div class="recog-item">
           <div class="recog-year">2025 &amp; 2026</div>
           <div class="recog-text">Agentblazer Legend<span>Top-tier Agentforce community status, two years running</span></div>
         </div>
         <div class="recog-item">
-          <div class="recog-year">2024 — present</div>
+          <div class="recog-year">2024 to Present</div>
           <div class="recog-text">Slack Community Leader<span>Tirana Chapter</span></div>
         </div>
         <div class="recog-item">
-          <div class="recog-year">2024 — 2025</div>
+          <div class="recog-year">2024 to 2025</div>
           <div class="recog-text">Pledge 1% Community Ambassador<span>Advocating 1% of profit, product or time to community causes</span></div>
         </div>
         <div class="recog-item">
-          <div class="recog-year">2020 — present</div>
-          <div class="recog-text">Founder &amp; Organizer — Albania Dreamin'<span>Largest community-led Salesforce conference in the Western Balkans</span></div>
+          <div class="recog-year">2020 to Present</div>
+          <div class="recog-text">Founder &amp; Organizer: Albania Dreamin'<span>Largest community-led Salesforce conference in the Western Balkans</span></div>
         </div>
         <div class="recog-item">
-          <div class="recog-year">2025 — Published</div>
-          <div class="recog-text">Peer-Reviewed Paper · ICCSM 2025, POLIS University<span>“Youth Engagement and Digital Capacity Building in EUSAIR” — DOI 10.37199/c41000311 · affiliated with University of Primorska, Slovenia</span></div>
+          <div class="recog-year">2025: Published</div>
+          <div class="recog-text">Peer-Reviewed Paper · ICCSM 2025, POLIS University<span>“Youth Engagement and Digital Capacity Building in EUSAIR” · DOI 10.37199/c41000311 · affiliated with University of Primorska, Slovenia</span></div>
         </div>
         <div class="recog-item">
-          <div class="recog-year">2025 — Featured</div>
-          <div class="recog-text">Swiss SDC · RisiAlbania · Helvetas Guidance<span>“CRM: The Case of Salesforce” — LDA Digital Solutions featured as recommended Salesforce partner in Albania</span></div>
+          <div class="recog-year">2025: Featured</div>
+          <div class="recog-text">Swiss SDC · RisiAlbania · Helvetas Guidance<span>“CRM: The Case of Salesforce,” LDA Digital Solutions featured as recommended Salesforce partner in Albania</span></div>
         </div>
         <div class="recog-item">
-          <div class="recog-year">2021 — Press</div>
-          <div class="recog-text">Featured in NY Elite Magazine, Shqiperia.com &amp; Botasot.info<span>Coverage of LEAPin Albania 2021 and Albania Dreamin' — youth professional development and Salesforce ecosystem leadership</span></div>
+          <div class="recog-year">2021: Press</div>
+          <div class="recog-text">Featured in NY Elite Magazine, Shqiperia.com &amp; Botasot.info<span>Coverage of LEAPin Albania 2021 and Albania Dreamin', youth professional development and Salesforce ecosystem leadership</span></div>
         </div>
         <div class="recog-item">
           <div class="recog-year">Trailblazer</div>
@@ -673,7 +725,7 @@ footer{
       <div class="section-num">04 / Speaking</div>
       <div>
         <h2 class="section-title">Stages &amp; <em>conversations.</em></h2>
-        <p class="section-lede">Where the work meets the community — from Dreamforce keynotes to civic-tech rooms across Europe and the Gulf.</p>
+        <p class="section-lede">Where the work meets the community: from Dreamforce keynotes to civic-tech rooms across Europe and the Gulf.</p>
       </div>
     </div>
 
@@ -686,7 +738,7 @@ footer{
       <div class="speak"><div class="speak-event">World Youth Forum</div><div class="speak-where">Sharm El-Sheikh</div><div class="speak-year">2018 · 2019</div></div>
       <div class="speak"><div class="speak-event">Open Government Europe</div><div class="speak-where">Rome</div><div class="speak-year">2022</div></div>
       <div class="speak"><div class="speak-event">LEAP Summit</div><div class="speak-where">Zagreb</div><div class="speak-year">2017 · 2019</div></div>
-      <div class="speak"><div class="speak-event">Spring Meetings — World Bank &amp; IMF</div><div class="speak-where">Washington, DC</div><div class="speak-year">2018</div></div>
+      <div class="speak"><div class="speak-event">Spring Meetings: World Bank &amp; IMF</div><div class="speak-where">Washington, DC</div><div class="speak-year">2018</div></div>
     </div>
   </div>
 </section>
@@ -700,7 +752,7 @@ footer{
     </div>
     <h2>Let's build the <em>system of outcomes.</em></h2>
     <p class="section-lede" style="max-width:720px">
-      Currently taking on Salesforce engagements with mission-driven, regulated, and scaling organizations — discovery, architecture review, POCs, and full-cycle delivery.
+      Currently taking on Salesforce engagements with mission-driven, regulated, and scaling organizations: discovery, architecture review, POCs, and full-cycle delivery.
     </p>
 
     <div class="contact-grid">
@@ -731,6 +783,22 @@ const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
 },{threshold:0.12, rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// mobile nav toggle
+const navToggle = document.querySelector('.nav-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+navToggle.addEventListener('click', ()=>{
+  const isOpen = mobileMenu.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+});
+mobileMenu.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click', ()=>{
+    mobileMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open menu');
+  });
+});
 </script>
 </body>
 </html>
