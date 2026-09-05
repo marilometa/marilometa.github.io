@@ -199,6 +199,33 @@ h1.name em{
   text-transform:uppercase;color:var(--paper-mute);
 }
 
+/* ───────────────────────── current role ───────────────────────── */
+.now{
+  display:grid;grid-template-columns:120px 1fr;gap:48px;align-items:start;
+}
+@media(max-width:760px){.now{grid-template-columns:1fr;gap:16px}}
+.now-label{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.16em;
+  color:var(--accent);text-transform:uppercase;padding-top:8px;
+  display:flex;align-items:center;gap:10px;
+}
+.now-label::before{
+  content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 4px rgba(1,118,211,.15);flex:none;
+}
+.now h3{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(24px,2.6vw,34px);line-height:1.15;letter-spacing:-0.01em;
+  margin-bottom:10px;
+}
+.now h3 em{font-style:italic;color:var(--accent)}
+.now-meta{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--paper-mute);margin-bottom:18px;
+}
+.now p{color:var(--paper-mute);font-size:15px;line-height:1.7;max-width:640px}
+.now p strong{color:var(--paper);font-weight:500}
+
 /* ───────────────────────── section base ───────────────────────── */
 section{padding:120px 0;border-bottom:1px solid var(--rule);position:relative}
 .section-head{
@@ -560,6 +587,7 @@ a:focus-visible, button:focus-visible{
       </p>
       <div class="hero-meta reveal reveal-d4">
         <div class="hero-meta-row"><span>Based</span><span>Washington, DC</span></div>
+        <div class="hero-meta-row"><span>Currently</span><span>Salesforce Administrator · AMT</span></div>
         <div class="hero-meta-row"><span>Practice</span><span>LDA Digital Solutions</span></div>
         <div class="hero-meta-row"><span>Certifications</span><span>21× Salesforce</span></div>
         <div class="hero-meta-row"><span>Designation</span><span>Application Architect</span></div>
@@ -568,6 +596,20 @@ a:focus-visible, button:focus-visible{
     </div>
   </div>
 </header>
+
+<!-- CURRENT ROLE -->
+<section id="now" style="padding:72px 0">
+  <div class="wrap">
+    <div class="now reveal">
+      <div class="now-label">Currently</div>
+      <div>
+        <h3>Salesforce Administrator at <em>AMT</em>, The Association For Manufacturing Technology.</h3>
+        <div class="now-meta">Full-time · Aug 2026 → Present · McLean, Virginia</div>
+        <p>Supporting AMT's Salesforce platform and connected business systems, partnering with teams across the organization to improve <strong>processes, data quality, reporting, automation, user support, and Salesforce adoption.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- STATS -->
 <section style="padding:60px 0;border-bottom:1px solid var(--rule)">
