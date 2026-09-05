@@ -5,9 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Marilo Meta: Salesforce MVP & CRM Architect</title>
 <meta name="description" content="Portfolio of Marilo Meta: Salesforce MVP, Application Architect, 21x Certified Consultant & Digital Transformation Advisor based in Washington, DC." />
+<meta name="author" content="Marilo Meta" />
+<meta name="theme-color" content="#F5F8FB" />
+<link rel="canonical" href="https://marilometa.github.io/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/og-image.png" />
+<!-- social sharing -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://marilometa.github.io/" />
+<meta property="og:title" content="Marilo Meta: Salesforce MVP & CRM Architect" />
+<meta property="og:description" content="Salesforce MVP, Application Architect and 21x certified consultant. I help organizations turn Salesforce from a system of record into a system of outcomes." />
+<meta property="og:image" content="https://marilometa.github.io/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Marilo Meta: Salesforce MVP & CRM Architect" />
+<meta property="og:site_name" content="Marilo Meta" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Marilo Meta: Salesforce MVP & CRM Architect" />
+<meta name="twitter:description" content="Salesforce MVP, Application Architect and 21x certified consultant. I help organizations turn Salesforce from a system of record into a system of outcomes." />
+<meta name="twitter:image" content="https://marilometa.github.io/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marilo Meta",
+  "url": "https://marilometa.github.io/",
+  "image": "https://marilometa.github.io/og-image.png",
+  "jobTitle": "Salesforce Administrator",
+  "worksFor": { "@type": "Organization", "name": "AMT - The Association For Manufacturing Technology" },
+  "description": "Salesforce MVP, Application Architect and 21x certified consultant helping organizations turn Salesforce into a system of outcomes.",
+  "email": "mailto:meta.marilo@gmail.com",
+  "telephone": "+1-201-374-0222",
+  "address": { "@type": "PostalAddress", "addressLocality": "Washington", "addressRegion": "DC", "addressCountry": "US" },
+  "award": ["Salesforce MVP", "Agentblazer Legend", "Salesforce Application Architect"],
+  "knowsAbout": ["Salesforce", "Sales Cloud", "Service Cloud", "Data Cloud", "Agentforce", "CRM Architecture", "Marketing Cloud Account Engagement", "Experience Cloud"],
+  "sameAs": [
+    "https://www.linkedin.com/in/marilometa",
+    "https://trailblazer.me/id/mmeta",
+    "https://ldasolution.com",
+    "https://ldaeurope.com"
+  ]
+}
+</script>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 <style>
 :root{
   --ink:#F5F8FB;
@@ -45,6 +89,15 @@ body::before{
 }
 .wrap{max-width:1280px;margin:0 auto;padding:0 48px;position:relative;z-index:2}
 @media(max-width:720px){.wrap{padding:0 24px}}
+
+/* ───────────────────────── skip link ───────────────────────── */
+.skip-link{
+  position:absolute;left:16px;top:-100px;z-index:100;
+  font-family:var(--mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;
+  background:var(--paper);color:#FFFFFF;padding:10px 16px;border-radius:2px;text-decoration:none;
+  transition:top .2s;
+}
+.skip-link:focus{top:16px;outline:2px solid var(--accent);outline-offset:3px}
 
 /* ───────────────────────── nav ───────────────────────── */
 .nav{
@@ -198,6 +251,33 @@ h1.name em{
   font-family:var(--mono);font-size:11px;letter-spacing:0.12em;
   text-transform:uppercase;color:var(--paper-mute);
 }
+
+/* ───────────────────────── current role ───────────────────────── */
+.now{
+  display:grid;grid-template-columns:120px 1fr;gap:48px;align-items:start;
+}
+@media(max-width:760px){.now{grid-template-columns:1fr;gap:16px}}
+.now-label{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.16em;
+  color:var(--accent);text-transform:uppercase;padding-top:8px;
+  display:flex;align-items:center;gap:10px;
+}
+.now-label::before{
+  content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 4px rgba(1,118,211,.15);flex:none;
+}
+.now h3{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(24px,2.6vw,34px);line-height:1.15;letter-spacing:-0.01em;
+  margin-bottom:10px;
+}
+.now h3 em{font-style:italic;color:var(--accent)}
+.now-meta{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--paper-mute);margin-bottom:18px;
+}
+.now p{color:var(--paper-mute);font-size:15px;line-height:1.7;max-width:640px}
+.now p strong{color:var(--paper);font-weight:500}
 
 /* ───────────────────────── section base ───────────────────────── */
 section{padding:120px 0;border-bottom:1px solid var(--rule);position:relative}
@@ -525,6 +605,7 @@ a:focus-visible, button:focus-visible{
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <nav class="nav">
   <div class="nav-inner">
@@ -549,6 +630,7 @@ a:focus-visible, button:focus-visible{
   </div>
 </nav>
 
+<main id="main">
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
@@ -560,6 +642,7 @@ a:focus-visible, button:focus-visible{
       </p>
       <div class="hero-meta reveal reveal-d4">
         <div class="hero-meta-row"><span>Based</span><span>Washington, DC</span></div>
+        <div class="hero-meta-row"><span>Currently</span><span>Salesforce Administrator · AMT</span></div>
         <div class="hero-meta-row"><span>Practice</span><span>LDA Digital Solutions</span></div>
         <div class="hero-meta-row"><span>Certifications</span><span>21× Salesforce</span></div>
         <div class="hero-meta-row"><span>Designation</span><span>Application Architect</span></div>
@@ -568,6 +651,20 @@ a:focus-visible, button:focus-visible{
     </div>
   </div>
 </header>
+
+<!-- CURRENT ROLE -->
+<section id="now" style="padding:72px 0">
+  <div class="wrap">
+    <div class="now reveal">
+      <div class="now-label">Currently</div>
+      <div>
+        <h3>Salesforce Administrator at <em>AMT</em>, The Association For Manufacturing Technology.</h3>
+        <div class="now-meta">Full-time · Aug 2026 → Present · McLean, Virginia</div>
+        <p>Supporting AMT's Salesforce platform and connected business systems, partnering with teams across the organization to improve <strong>processes, data quality, reporting, automation, user support, and Salesforce adoption.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- STATS -->
 <section style="padding:60px 0;border-bottom:1px solid var(--rule)">
@@ -860,10 +957,11 @@ a:focus-visible, button:focus-visible{
 
     <footer>
       <div>© 2026 Marilo Meta · Washington, DC</div>
-      <div>Portfolio · v2026.05</div>
+      <div>Portfolio · v2026.09</div>
     </footer>
   </div>
 </section>
+</main>
 
 <script>
 // reveal on scroll
