@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://marilometa.github.io/" />
 <meta property="og:title" content="Marilo Meta: Salesforce MVP & CRM Architect" />
-<meta property="og:description" content="Salesforce MVP, Application Architect and 21x certified consultant. I help organizations turn Salesforce from a system of record into a system of outcomes." />
+<meta property="og:description" content="Salesforce MVP and Application Architect. I design Salesforce data models, automation, integrations and training for nonprofits, associations and growing organizations." />
 <meta property="og:image" content="https://marilometa.github.io/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -23,7 +23,7 @@
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Marilo Meta: Salesforce MVP & CRM Architect" />
-<meta name="twitter:description" content="Salesforce MVP, Application Architect and 21x certified consultant. I help organizations turn Salesforce from a system of record into a system of outcomes." />
+<meta name="twitter:description" content="Salesforce MVP and Application Architect. I design Salesforce data models, automation, integrations and training for nonprofits, associations and growing organizations." />
 <meta name="twitter:image" content="https://marilometa.github.io/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
   "image": "https://marilometa.github.io/og-image.png",
   "jobTitle": "Salesforce Business Systems Specialist",
   "worksFor": { "@type": "Organization", "name": "AMT - The Association For Manufacturing Technology" },
-  "description": "Salesforce MVP, Application Architect and 21x certified consultant helping organizations turn Salesforce into a system of outcomes.",
+  "description": "Salesforce MVP and Application Architect. I design Salesforce data models, automation, integrations and training for nonprofits, associations and growing organizations.",
   "email": "mailto:meta.marilo@gmail.com",
   "telephone": "+1-201-374-0222",
   "address": { "@type": "PostalAddress", "addressLocality": "Washington", "addressRegion": "DC", "addressCountry": "US" },
@@ -535,7 +535,7 @@ footer{
 
 
 /* ───────────────────────── polish ───────────────────────── */
-.hero h1.name em{
+.hero .role em{
   background:linear-gradient(100deg, var(--accent) 0%, var(--accent-2) 45%, var(--accent) 90%);
   background-size:200% 100%;
   -webkit-background-clip:text;
@@ -567,10 +567,118 @@ a:focus-visible, button:focus-visible{
   .reveal{opacity:1 !important;transform:none !important}
 }
 
+
+/* ───────────────────────── v2026.10 revision ───────────────────────── */
+/* tighter vertical rhythm: less scrolling */
+section{padding:96px 0}
+.section-head{margin-bottom:56px}
+.hero{padding:150px 0 88px}
+h1.name{font-size:clamp(48px,7.5vw,112px);margin-bottom:14px}
+.role{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(26px,3.4vw,44px);line-height:1.15;letter-spacing:-0.02em;
+  color:var(--paper);font-variation-settings:"SOFT" 80;
+}
+.role em{font-style:italic;color:var(--accent)}
+.hero-sub{margin-top:48px}
+.tagline{font-size:clamp(20px,2.2vw,26px);max-width:560px}
+.audience{font-size:16px;line-height:1.6;color:var(--paper);margin-top:18px;max-width:520px}
+.audience strong{font-weight:500}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;
+  padding:13px 20px;border-radius:2px;text-decoration:none;transition:all .2s;
+  display:inline-flex;align-items:center;min-height:44px;
+}
+.btn-primary{background:var(--paper);color:#FFFFFF}
+.btn-primary:hover{background:var(--accent)}
+.btn-ghost{border:1px solid var(--rule-strong);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+@media(max-width:520px){.eyebrow::after{display:none}}
+.now-note{font-size:13px;color:var(--paper-mute);margin-top:14px;max-width:640px}
+
+/* credentials vs product experience */
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:56px;padding-top:40px;border-top:1px solid var(--rule-strong)}
+@media(max-width:820px){.creds{grid-template-columns:1fr;gap:36px}}
+.cred-group h4,.recog-group h4{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:10px;font-weight:500;
+}
+.cred-note{font-size:14px;color:var(--paper-mute);line-height:1.6;margin-bottom:18px}
+.cred-note a,.recog-link{color:var(--accent);text-underline-offset:3px}
+.creds .caps{margin-top:0}
+.cap.earned{background:var(--paper);color:#FFFFFF;border-color:var(--paper)}
+
+/* flagship case studies */
+.flags{display:flex;flex-direction:column;border-top:1px solid var(--rule-strong)}
+.flag{padding:48px 0;border-bottom:1px solid var(--rule)}
+.flag-head{display:grid;grid-template-columns:80px 1fr;gap:32px;align-items:start;margin-bottom:28px}
+@media(max-width:760px){.flag-head{grid-template-columns:1fr;gap:10px}}
+.flag-head h3{
+  font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.4vw,32px);
+  line-height:1.15;letter-spacing:-0.01em;
+}
+.flag-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px;margin-left:112px}
+@media(max-width:760px){.flag-grid{grid-template-columns:1fr;margin-left:0;gap:22px}}
+.flag-grid .wide{grid-column:1/-1}
+.flag-grid dt{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:8px;
+}
+.flag-grid dd{font-size:15px;line-height:1.7;color:var(--paper)}
+.flag-grid dd ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.flag-grid dd li{padding-left:18px;position:relative}
+.flag-grid dd li::before{content:"–";position:absolute;left:0;color:var(--accent)}
+.flag-grid dd .measure{display:block;margin-top:8px;color:var(--paper-mute);font-size:14px}
+
+/* shorter engagements */
+.more-title{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent);margin:64px 0 20px;
+}
+.more{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-strong);border:1px solid var(--rule-strong)}
+@media(max-width:760px){.more{grid-template-columns:1fr}}
+.more-item{background:var(--ink);padding:28px 26px}
+.more-item .case-industry{margin-bottom:10px}
+.more-item p{font-size:15px;line-height:1.65;color:var(--paper)}
+
+/* recognition groups */
+.recog-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+@media(max-width:980px){.recog-groups{grid-template-columns:1fr;gap:40px}}
+.recog-group .recog-item{grid-template-columns:1fr;gap:4px;padding:16px 0}
+.recog-group .recog-year{font-size:12px}
+.recog-text a{color:var(--accent);text-underline-offset:3px}
+
+/* events table */
+.events{width:100%;border-collapse:collapse;border-top:1px solid var(--rule-strong)}
+.events th{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--paper-mute);font-weight:400;text-align:left;padding:14px 16px 14px 0;
+  border-bottom:1px solid var(--rule-strong);
+}
+.events td{padding:16px 16px 16px 0;border-bottom:1px solid var(--rule);font-size:15px;vertical-align:top}
+.events td:first-child{font-family:var(--serif);font-size:19px;letter-spacing:-0.01em}
+.events .role-tag{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--paper-mute);white-space:nowrap;
+}
+.events .role-tag.org{color:var(--accent)}
+@media(max-width:640px){
+  .events thead{display:none}
+  .events tr{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:14px 0;border-bottom:1px solid var(--rule)}
+  .events td{border:none;padding:0}
+  .events td:nth-child(2),.events td:nth-child(3){font-size:13px;color:var(--paper-mute)}
+  .events td:nth-child(4){grid-row:1;grid-column:2}
+}
+
+/* readability: no small label under 12px, stronger muted contrast */
+:root{--paper-mute:#4E6680;--accent:#016DC4}
+.stat-label,.case-industry,.speak-where,.speak-year,.quote-attr,.contact-block h4,footer,.svc-num,.cap,.now-meta{font-size:12px}
+
 /* ───────────────────────── print ───────────────────────── */
 @media print{
   @page{ size:letter; margin:0.4in 0.5in 0.6in; }
-  .hero h1.name em{ animation:none; background:none; -webkit-text-fill-color:var(--accent); }
+  .hero .role em{ animation:none; background:none; -webkit-text-fill-color:var(--accent); }
   body::before{ display:none; }
   .nav{ display:none !important; }
   .hero{ padding:12px 0 24px; }
@@ -608,26 +716,28 @@ a:focus-visible, button:focus-visible{
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="nav">
+<nav class="nav" aria-label="Main">
   <div class="nav-inner">
-    <a href="#" class="nav-mark">Marilo Meta</a>
+    <a href="#main" class="nav-mark">Marilo Meta</a>
     <div class="nav-links">
       <a href="#work">Work</a>
-      <a href="#capabilities">Capabilities</a>
+      <a href="#capabilities">Expertise</a>
       <a href="#recognition">Recognition</a>
+      <a href="#speaking">Events</a>
       <a href="#contact">Contact</a>
     </div>
-    <a href="#contact" class="nav-cta">Start a project</a>
+    <a href="mailto:meta.marilo@gmail.com" class="nav-cta">Email me</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <a href="#work">Work</a>
-    <a href="#capabilities">Capabilities</a>
+    <a href="#capabilities">Expertise</a>
     <a href="#recognition">Recognition</a>
+    <a href="#speaking">Events</a>
     <a href="#contact">Contact</a>
-    <a href="#contact" class="mobile-cta">Start a project</a>
+    <a href="mailto:meta.marilo@gmail.com" class="mobile-cta">Email me</a>
   </div>
 </nav>
 
@@ -635,18 +745,22 @@ a:focus-visible, button:focus-visible{
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow reveal">Portfolio &nbsp;·&nbsp; 2026</div>
-    <h1 class="name reveal reveal-d2">Salesforce<br/>MVP &amp;<br/><em>CRM Architect.</em></h1>
+    <div class="eyebrow reveal">Portfolio &nbsp;·&nbsp; Washington, DC</div>
+    <h1 class="name reveal reveal-d2">Marilo Meta</h1>
+    <p class="role reveal reveal-d2">Salesforce MVP &amp; <em>CRM Architect</em></p>
     <div class="hero-sub">
-      <p class="tagline reveal reveal-d3">
-        I help organizations turn Salesforce from a system of record into a <strong>system of outcomes</strong>: pipeline accelerated, working capital freed, operations rebuilt.
-      </p>
+      <div class="reveal reveal-d3">
+        <p class="tagline">I design and build Salesforce systems. That means the data model, automation, integrations with other tools, and the training that helps people use them.</p>
+        <p class="audience">I work mostly with <strong>nonprofits, associations and growing organizations.</strong></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:meta.marilo@gmail.com">Email me</a>
+          <a class="btn btn-ghost" href="#work">See case studies</a>
+        </div>
+      </div>
       <div class="hero-meta reveal reveal-d4">
-        <div class="hero-meta-row"><span>Based</span><span>Washington, DC</span></div>
-        <div class="hero-meta-row"><span>Currently</span><span>Salesforce Business Systems Specialist · AMT</span></div>
+        <div class="hero-meta-row"><span>Role</span><span>Salesforce Business Systems Specialist · AMT</span></div>
         <div class="hero-meta-row"><span>Practice</span><span>LDA Digital Solutions</span></div>
         <div class="hero-meta-row"><span>Certifications</span><span>21× Salesforce</span></div>
-        <div class="hero-meta-row"><span>Designation</span><span>Application Architect</span></div>
         <div class="hero-meta-row"><span>Recognition</span><span>Salesforce MVP · Agentblazer Legend</span></div>
       </div>
     </div>
@@ -654,7 +768,7 @@ a:focus-visible, button:focus-visible{
 </header>
 
 <!-- CURRENT ROLE -->
-<section id="now" style="padding:72px 0">
+<section id="now" style="padding:64px 0">
   <div class="wrap">
     <div class="now reveal">
       <div class="now-label">Currently</div>
@@ -662,70 +776,79 @@ a:focus-visible, button:focus-visible{
         <h3>Salesforce Business Systems Specialist at <em>AMT</em>, The Association For Manufacturing Technology.</h3>
         <div class="now-meta">Full-time · Aug 2026 → Present · McLean, Virginia</div>
         <p>Supporting AMT's Salesforce platform and connected business systems, partnering with teams across the organization to improve <strong>processes, data quality, reporting, automation, user support, and Salesforce adoption.</strong></p>
+        <p class="now-note">This is a personal site. The case studies below come from independent consulting work, not from my role at AMT.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
-<section style="padding:60px 0;border-bottom:1px solid var(--rule)">
+<section style="padding:56px 0;border-bottom:1px solid var(--rule)">
   <div class="wrap">
     <div class="stats">
-    <div class="reveal"><div class="stat-num" data-count="21" data-suffix="×">21×</div><div class="stat-label">Salesforce<br/>Certifications</div></div>
-    <div class="reveal reveal-d2"><div class="stat-num" data-count="5">5+</div><div class="stat-label">Years Hands-On<br/>Salesforce</div></div>
-    <div class="reveal reveal-d3"><div class="stat-num" data-count="6">6</div><div class="stat-label">Salesforce<br/>Clouds Delivered</div></div>
-    <div class="reveal reveal-d4"><div class="stat-num" data-count="50" data-suffix="+">50+</div><div class="stat-label">Conference Talks<br/>&amp; Sessions Led</div></div>
+    <div class="reveal"><div class="stat-num" data-count="21" data-suffix="×">21×</div><div class="stat-label">Salesforce<br/>certifications</div></div>
+    <div class="reveal reveal-d2"><div class="stat-num">2022</div><div class="stat-label">Salesforce MVP<br/>since</div></div>
+    <div class="reveal reveal-d3"><div class="stat-num" data-count="5">5+</div><div class="stat-label">Years hands-on<br/>Salesforce</div></div>
+    <div class="reveal reveal-d4"><div class="stat-num">2020</div><div class="stat-label">Founded<br/>Albania Dreamin'</div></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- EXPERTISE -->
 <section id="capabilities">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-num">01 / Practice</div>
+      <div class="section-num">01 / Expertise</div>
       <div>
-        <h2 class="section-title">A practice built for the gap between <em>vision</em> and <em>adoption.</em></h2>
-        <p class="section-lede">Most Salesforce engagements fail at the seams: discovery vs. delivery, sponsor vs. user, architecture vs. operations. I work along those seams.</p>
+        <h2 class="section-title">What I <em>help with.</em></h2>
+        <p class="section-lede">I'm usually brought in when data lives in too many places, people repeat manual steps, systems don't talk to each other, or a team has stopped trusting its reports.</p>
       </div>
     </div>
 
     <div class="services">
       <div class="svc reveal">
-        <div class="svc-num">A: Architecture</div>
-        <h3 class="svc-title">CRM architecture &amp; automation that holds up under scrutiny.</h3>
-        <p class="svc-body">Data models, sharing &amp; visibility, declarative automation (Flow Builder, validation rules, App Builder), and integration design aligned with the Salesforce Well-Architected Framework.</p>
+        <div class="svc-num">A: Architecture &amp; data</div>
+        <h3 class="svc-title">A data model that fits how you work.</h3>
+        <p class="svc-body">Objects and fields, sharing and visibility, duplicate rules and clean data, designed around the Salesforce Well-Architected Framework.</p>
       </div>
       <div class="svc reveal reveal-d2">
-        <div class="svc-num">B: Strategy</div>
-        <h3 class="svc-title">Discovery, process design &amp; value roadmaps.</h3>
-        <p class="svc-body">Executive workshops, future-state agentic visions, no-code POCs that prove value in 4–6 weeks, and multi-year roadmaps that AEs and CFOs both can defend.</p>
+        <div class="svc-num">B: Automation &amp; integrations</div>
+        <h3 class="svc-title">Fewer manual steps and copy-paste errors.</h3>
+        <p class="svc-body">Flows, approvals and validation rules, plus integrations that connect Salesforce to email, accounting, marketing tools and web forms.</p>
       </div>
       <div class="svc reveal reveal-d3">
-        <div class="svc-num">C: Adoption</div>
-        <h3 class="svc-title">Change, enablement &amp; long-term account health.</h3>
-        <p class="svc-body">Role-based enablement, release communications, executive briefings, and governance models that hold post-go-live: measured in sustained feature usage, not handoff signatures.</p>
+        <div class="svc-num">C: Adoption &amp; support</div>
+        <h3 class="svc-title">Systems people actually use.</h3>
+        <p class="svc-body">Role-based training, release notes, reports and dashboards people can rely on, and support after go-live.</p>
       </div>
     </div>
 
-    <div class="caps" style="margin-top:64px">
-      <span class="cap featured">Application Architect</span>
-      <span class="cap featured">Sales Cloud</span>
-      <span class="cap featured">Service Cloud</span>
-      <span class="cap featured">Data Cloud</span>
-      <span class="cap featured">Agentforce</span>
-      <span class="cap">Marketing Cloud</span>
-      <span class="cap">Account Engagement</span>
-      <span class="cap">Experience Cloud</span>
-      <span class="cap">MuleSoft</span>
-      <span class="cap">Slack</span>
-      <span class="cap">Platform Developer I</span>
-      <span class="cap">Platform App Builder</span>
-      <span class="cap">Data Architect</span>
-      <span class="cap">Sharing &amp; Visibility</span>
-      <span class="cap">Business Analyst</span>
-      <span class="cap">AI Associate</span>
-      <span class="cap">UX Designer</span>
+    <div class="creds">
+      <div class="cred-group reveal">
+        <h4>Certifications &amp; designations</h4>
+        <p class="cred-note">21 Salesforce certifications in total. <a href="https://trailblazer.me/id/mmeta" target="_blank" rel="noopener">Verify them on my Trailblazer profile</a>.</p>
+        <div class="caps">
+          <span class="cap earned">Application Architect</span>
+          <span class="cap earned">Data Architect</span>
+          <span class="cap earned">Sharing and Visibility Architect</span>
+          <span class="cap earned">Platform App Builder</span>
+          <span class="cap earned">Platform Developer I</span>
+        </div>
+      </div>
+      <div class="cred-group reveal reveal-d2">
+        <h4>Product experience</h4>
+        <p class="cred-note">Products I've used on client projects. This list describes experience, not certifications.</p>
+        <div class="caps">
+          <span class="cap">Sales Cloud</span>
+          <span class="cap">Service Cloud</span>
+          <span class="cap">Data Cloud</span>
+          <span class="cap">Agentforce</span>
+          <span class="cap">Account Engagement</span>
+          <span class="cap">Experience Cloud</span>
+          <span class="cap">MuleSoft</span>
+          <span class="cap">Slack</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -736,106 +859,89 @@ a:focus-visible, button:focus-visible{
     <div class="section-head">
       <div class="section-num">02 / Work</div>
       <div>
-        <h2 class="section-title">Selected <em>case studies.</em></h2>
-        <p class="section-lede">Engagements across recruitment, healthcare, public sector, financial services and biotech analytics: measured by what changed for the business, not what was deployed.</p>
+        <h2 class="section-title">Selected <em>work.</em></h2>
+        <p class="section-lede">Three engagements in detail, then shorter summaries. Client names and confidential details are left out.</p>
       </div>
     </div>
 
-    <div class="cases">
+    <div class="flags">
 
-      <article class="case reveal">
-        <div class="case-num">01</div>
-        <div class="case-content">
-          <div class="case-industry">Recruitment · Sales Cloud</div>
-          <h3>From spreadsheets to a candidate engine.</h3>
-          <p class="case-desc">A regional recruitment agency ran candidate data on spreadsheets and email threads. Built <strong>Sales Cloud</strong> with custom candidate and job objects, approval automation, and Gmail integration, moving the team to a single source of truth in weeks, not quarters.</p>
+      <article class="flag reveal">
+        <div class="flag-head">
+          <div class="case-num">01</div>
+          <div>
+            <div class="case-industry">National nonprofit · Account Engagement &amp; Experience Cloud</div>
+            <h3>A pro bono build the client chose to continue.</h3>
+          </div>
         </div>
-        <div class="case-impact">
-          <div class="impact-item"><span class="impact-num">40%</span><span class="impact-label">Faster hiring cycle</span></div>
-          <div class="impact-item"><span class="impact-num">100%</span><span class="impact-label">Adoption in week 1</span></div>
-          <div class="impact-item"><span class="impact-num">200+</span><span class="impact-label">Records centralized</span></div>
-        </div>
+        <dl class="flag-grid">
+          <div><dt>Problem &amp; scope</dt><dd>A national veterans nonprofit needed a complete Salesforce and Account Engagement setup for member communications. The scope covered email domain setup, subscription management, member registration, duplicate management and a review of existing dashboards.</dd></div>
+          <div><dt>My role</dt><dd>Pro bono consultant, matched through Catchafire. I designed and configured the build.</dd></div>
+          <div><dt>Key decisions &amp; constraints</dt><dd>Members choose what they receive through an Email Preference Center, which routes them into five segmented lists. Duplicates are handled with Salesforce's native duplicate management rather than a separate tool. The work was delivered as a pro bono engagement.</dd></div>
+          <div><dt>What was delivered</dt><dd><ul>
+            <li>Email domain authentication</li>
+            <li>Email Preference Center</li>
+            <li>Five segmented mailing lists with automatic routing</li>
+            <li>Experience Cloud member registration site</li>
+            <li>Native duplicate management</li>
+            <li>Audit of a 16-component dashboard</li>
+          </ul></dd></div>
+          <div class="wide"><dt>Outcome &amp; how it was measured</dt><dd>After the pro bono phase, the organization secured a grant to continue the engagement.<span class="measure">Measured by: the follow-on, grant-funded work.</span></dd></div>
+        </dl>
       </article>
 
-      <article class="case reveal">
-        <div class="case-num">02</div>
-        <div class="case-content">
-          <div class="case-industry">Public Sector · Service Cloud</div>
-          <h3>Citizen requests, finally legible.</h3>
-          <p class="case-desc">National public agency needed a unified CRM for citizen requests and internal cases. Deployed <strong>Service Cloud</strong> with automated workflows and a self-service portal, closing the gap between departments and creating an auditable trail end-to-end.</p>
+      <article class="flag reveal">
+        <div class="flag-head">
+          <div class="case-num">02</div>
+          <div>
+            <div class="case-industry">Biotech analytics · Sales Cloud stabilization</div>
+            <h3>From an at-risk go-live to executive sign-off in two weeks.</h3>
+          </div>
         </div>
-        <div class="case-impact">
-          <div class="impact-item"><span class="impact-num">35%</span><span class="impact-label">Faster case resolution</span></div>
-          <div class="impact-item"><span class="impact-num">↑</span><span class="impact-label">Cross-dept transparency</span></div>
-        </div>
+        <dl class="flag-grid">
+          <div><dt>Problem &amp; scope</dt><dd>A biotech analytics firm's Sales Cloud go-live was at risk. The scope was to stabilize the implementation and get it approved by executives.</dd></div>
+          <div><dt>My role</dt><dd>I took over as delivery lead and Salesforce admin.</dd></div>
+          <div><dt>Key decisions &amp; constraints</dt><dd>The main constraint was a two-week window. I re-prioritized the backlog and ran daily stand-ups to keep the team focused on what approval required.</dd></div>
+          <div><dt>What was delivered</dt><dd><ul>
+            <li>A prioritized backlog</li>
+            <li>Forecasting reports</li>
+            <li>Page layouts</li>
+            <li>Permission validation</li>
+            <li>User acceptance testing support</li>
+          </ul></dd></div>
+          <div class="wide"><dt>Outcome &amp; how it was measured</dt><dd>Executives approved the implementation within fourteen days.<span class="measure">Measured by: the date of executive sign-off.</span></dd></div>
+        </dl>
       </article>
 
-      <article class="case reveal">
-        <div class="case-num">03</div>
-        <div class="case-content">
-          <div class="case-industry">Healthcare · Service Cloud</div>
-          <h3>Triage that earns clinicians their time back.</h3>
-          <p class="case-desc">Healthcare organization buried in patient inquiries and referral workflows. Built <strong>Service Cloud triage automation</strong> and referral routing: administrative drag down, communication accuracy up, reporting credible to leadership for the first time.</p>
+      <article class="flag reveal">
+        <div class="flag-head">
+          <div class="case-num">03</div>
+          <div>
+            <div class="case-industry">B2B revenue operations · Lead &amp; contact scoring</div>
+            <h3>One scoring model for sales and marketing.</h3>
+          </div>
         </div>
-        <div class="case-impact">
-          <div class="impact-item"><span class="impact-num">30%</span><span class="impact-label">Less admin workload</span></div>
-          <div class="impact-item"><span class="impact-num">↑</span><span class="impact-label">Patient communication</span></div>
-        </div>
+        <dl class="flag-grid">
+          <div><dt>Problem &amp; scope</dt><dd>A B2B revenue operations team needed lead and contact scoring, plus revenue reporting that sales and marketing would both rely on.</dd></div>
+          <div><dt>My role</dt><dd>I delivered the work in sprints, covering backlog grooming, sprint planning, demos and regular stakeholder reviews.</dd></div>
+          <div><dt>Key decisions &amp; constraints</dt><dd>The data model, automation and reports were tied to business metrics and governance rules the team had defined.</dd></div>
+          <div><dt>What was delivered</dt><dd><ul>
+            <li>Lead and contact scoring</li>
+            <li>Revenue analytics reports</li>
+            <li>Supporting data model and automation changes</li>
+          </ul></dd></div>
+          <div class="wide"><dt>Outcome</dt><dd>Sales and marketing work from one shared scoring model and one set of revenue reports.</dd></div>
+        </dl>
       </article>
 
-      <article class="case reveal">
-        <div class="case-num">04</div>
-        <div class="case-content">
-          <div class="case-industry">Financial Services · Sales Cloud</div>
-          <h3>Loan deals you can actually forecast.</h3>
-          <p class="case-desc">Loan data scattered across three systems and a finance team flying blind. Implemented <strong>Sales Cloud</strong> with automated lead assignment, approval flows, and accounting integration, collapsing the pipeline-to-finance gap into a single dashboard.</p>
-        </div>
-        <div class="case-impact">
-          <div class="impact-item"><span class="impact-num">25%</span><span class="impact-label">Faster deal approvals</span></div>
-          <div class="impact-item"><span class="impact-num">1</span><span class="impact-label">Source of truth (was 3)</span></div>
-        </div>
-      </article>
+    </div>
 
-      <article class="case reveal">
-        <div class="case-num">05</div>
-        <div class="case-content">
-          <div class="case-industry">Biotech Analytics · Sales Cloud Stabilization</div>
-          <h3>From at-risk go-live to executive sign-off in two weeks.</h3>
-          <p class="case-desc">Time-critical <strong>Sales Cloud</strong> engagement for a biotech analytics firm. Took over as delivery lead and Salesforce admin, prioritized backlog, ran daily stand-ups, configured forecasting reports and page layouts, validated permissions, and supported UAT, securing executive approval inside fourteen days.</p>
-        </div>
-        <div class="case-impact">
-          <div class="impact-item"><span class="impact-num">2 wks</span><span class="impact-label">To executive sign-off</span></div>
-          <div class="impact-item"><span class="impact-num">UAT ✓</span><span class="impact-label">First-pass acceptance</span></div>
-        </div>
-      </article>
-
-      <article class="case reveal">
-        <div class="case-num">06</div>
-        <div class="case-content">
-          <div class="case-industry">RevOps · Lead &amp; Contact Scoring</div>
-          <h3>Scoring that sales actually trusts.</h3>
-          <p class="case-desc">Delivered revenue analytics and Lead/Contact scoring for a <strong>B2B revenue operations</strong> team via sprint-based execution: backlog grooming, sprint planning, demos, stakeholder loops. Aligned the data model, automation, and reporting to defined business metrics and governance, so sales and marketing share one operating picture.</p>
-        </div>
-        <div class="case-impact">
-          <div class="impact-item"><span class="impact-num">↑</span><span class="impact-label">Pipeline visibility</span></div>
-          <div class="impact-item"><span class="impact-num">↑</span><span class="impact-label">Cross-team trust</span></div>
-        </div>
-      </article>
-
-      <article class="case reveal">
-        <div class="case-num">07</div>
-        <div class="case-content">
-          <div class="case-industry">National Nonprofit · MCAE &amp; Experience Cloud</div>
-          <h3>Pro bono work the client funded to keep.</h3>
-          <p class="case-desc">Full Salesforce and <strong>Marketing Cloud Account Engagement</strong> build for a national veterans nonprofit: domain authentication, a GDPR-compliant Email Preference Center, five segmented mailing lists with automatic routing, an Experience Cloud member registration site, native duplicate management, and a 16-component dashboard audit. The organization then secured a grant to continue the engagement.</p>
-        </div>
-        <div class="case-impact">
-          <div class="impact-item"><span class="impact-num">$22.8K</span><span class="impact-label">Project value (Catchafire)</span></div>
-          <div class="impact-item"><span class="impact-num">5</span><span class="impact-label">Email segments launched</span></div>
-          <div class="impact-item"><span class="impact-num">→ Paid</span><span class="impact-label">Converted to grant-funded work</span></div>
-        </div>
-      </article>
-
+    <h3 class="more-title">More engagements</h3>
+    <div class="more">
+      <div class="more-item reveal"><div class="case-industry">Recruitment · Sales Cloud</div><p>Moved a regional recruitment agency from spreadsheets and email threads to Sales Cloud, with custom candidate and job objects, approval automation and Gmail integration.</p></div>
+      <div class="more-item reveal reveal-d2"><div class="case-industry">Public sector · Service Cloud</div><p>Brought citizen requests and internal cases for a national public agency into one system, with automated workflows, a self-service portal and an audit trail across departments.</p></div>
+      <div class="more-item reveal"><div class="case-industry">Healthcare · Service Cloud</div><p>Built triage automation and referral routing for patient inquiries, with reporting for leadership.</p></div>
+      <div class="more-item reveal reveal-d2"><div class="case-industry">Financial services · Sales Cloud</div><p>Consolidated loan data from three systems into Sales Cloud, with automated lead assignment, approval flows, accounting integration and a single dashboard.</p></div>
     </div>
   </div>
 </section>
@@ -846,86 +952,67 @@ a:focus-visible, button:focus-visible{
     <div class="section-head">
       <div class="section-num">03 / Recognition</div>
       <div>
-        <h2 class="section-title">Trusted by the <em>community</em> that built the platform.</h2>
+        <h2 class="section-title">Credentials, community <em>&amp; research.</em></h2>
+        <p class="section-lede">Links go to the original record where one is public.</p>
       </div>
     </div>
 
-    <div class="quote-block">
-      <div>
-        <div class="quote-mark">“</div>
-        <blockquote>
-          The Salesforce MVP program recognizes exceptional individuals within the community for their leadership, knowledge, and ongoing contributions.
-        </blockquote>
-        <div class="quote-attr">Salesforce, on the MVP designation</div>
+    <div class="recog-groups">
+      <div class="recog-group reveal">
+        <h4>Credentials</h4>
+        <div class="recog-list">
+          <div class="recog-item"><div class="recog-year">2026</div><div class="recog-text">Salesforce Application Architect<span>Earned through Data Architect, Sharing and Visibility Architect, Platform App Builder and Platform Developer I.</span></div></div>
+          <div class="recog-item"><div class="recog-year">Ongoing</div><div class="recog-text">21 Salesforce certifications<span><a href="https://trailblazer.me/id/mmeta" target="_blank" rel="noopener">Trailblazer profile</a></span></div></div>
+          <div class="recog-item"><div class="recog-year">Trailhead</div><div class="recog-text">5× Ranger · 650+ badges · 23 superbadges<span><a href="https://trailblazer.me/id/mmeta" target="_blank" rel="noopener">Trailblazer profile</a></span></div></div>
+        </div>
       </div>
-      <div class="recog-list">
-        <div class="recog-item">
-          <div class="recog-year">2022 to Present</div>
-          <div class="recog-text">Salesforce MVP<span>Recognized for sustained ecosystem contribution</span></div>
+      <div class="recog-group reveal reveal-d2">
+        <h4>Community recognition</h4>
+        <div class="recog-list">
+          <div class="recog-item"><div class="recog-year">2022 to present</div><div class="recog-text">Salesforce MVP</div></div>
+          <div class="recog-item"><div class="recog-year">2025 &amp; 2026</div><div class="recog-text">Agentblazer Legend</div></div>
+          <div class="recog-item"><div class="recog-year">2024 to present</div><div class="recog-text">Slack Community Leader<span>Tirana chapter</span></div></div>
+          <div class="recog-item"><div class="recog-year">2024 to 2025</div><div class="recog-text">Pledge 1% Community Ambassador</div></div>
+          <div class="recog-item"><div class="recog-year">2020 to present</div><div class="recog-text">Founder &amp; organizer, Albania Dreamin'<span>Community-led Salesforce conference in Tirana, held every year since 2020.</span></div></div>
         </div>
-        <div class="recog-item">
-          <div class="recog-year">2026</div>
-          <div class="recog-text">Salesforce Application Architect<span>Domain architect designation: Data, Sharing &amp; Visibility, App Builder, Developer I</span></div>
-        </div>
-        <div class="recog-item">
-          <div class="recog-year">2025 &amp; 2026</div>
-          <div class="recog-text">Agentblazer Legend<span>Top-tier Agentforce community status, two years running</span></div>
-        </div>
-        <div class="recog-item">
-          <div class="recog-year">2024 to Present</div>
-          <div class="recog-text">Slack Community Leader<span>Tirana Chapter</span></div>
-        </div>
-        <div class="recog-item">
-          <div class="recog-year">2024 to 2025</div>
-          <div class="recog-text">Pledge 1% Community Ambassador<span>Advocating 1% of profit, product or time to community causes</span></div>
-        </div>
-        <div class="recog-item">
-          <div class="recog-year">2020 to Present</div>
-          <div class="recog-text">Founder &amp; Organizer: Albania Dreamin'<span>Largest community-led Salesforce conference in the Western Balkans</span></div>
-        </div>
-        <div class="recog-item">
-          <div class="recog-year">2025: Published</div>
-          <div class="recog-text">Peer-Reviewed Paper · ICCSM 2025, POLIS University<span>“Youth Engagement and Digital Capacity Building in EUSAIR” · DOI 10.37199/c41000311 · affiliated with University of Primorska, Slovenia</span></div>
-        </div>
-        <div class="recog-item">
-          <div class="recog-year">2025: Featured</div>
-          <div class="recog-text">Swiss SDC · RisiAlbania · Helvetas Guidance<span>“CRM: The Case of Salesforce,” LDA Digital Solutions featured as recommended Salesforce partner in Albania</span></div>
-        </div>
-        <div class="recog-item">
-          <div class="recog-year">2021: Press</div>
-          <div class="recog-text">Featured in NY Elite Magazine, Shqiperia.com &amp; Botasot.info<span>Coverage of LEAPin Albania 2021 and Albania Dreamin', youth professional development and Salesforce ecosystem leadership</span></div>
-        </div>
-        <div class="recog-item">
-          <div class="recog-year">Trailblazer</div>
-          <div class="recog-text">5× Ranger · 650+ badges · 23 superbadges</div>
+      </div>
+      <div class="recog-group reveal reveal-d3">
+        <h4>Research &amp; press</h4>
+        <div class="recog-list">
+          <div class="recog-item"><div class="recog-year">2025 · Peer-reviewed paper</div><div class="recog-text">“Youth Engagement and Digital Capacity Building in EUSAIR”<span>ICCSM 2025, POLIS University · affiliated with University of Primorska, Slovenia · <a href="https://doi.org/10.37199/c41000311" target="_blank" rel="noopener">DOI 10.37199/c41000311</a></span></div></div>
+          <div class="recog-item"><div class="recog-year">2025 · Featured</div><div class="recog-text">Swiss SDC · RisiAlbania · Helvetas guidance<span>“CRM: The Case of Salesforce” lists LDA Digital Solutions as a recommended Salesforce partner in Albania.</span></div></div>
+          <div class="recog-item"><div class="recog-year">2021 · Press</div><div class="recog-text">NY Elite Magazine, Shqiperia.com &amp; Botasot.info<span>Coverage of LEAPin Albania 2021 and Albania Dreamin'.</span></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SPEAKING -->
+<!-- EVENTS -->
 <section id="speaking">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-num">04 / Speaking</div>
+      <div class="section-num">04 / Events</div>
       <div>
-        <h2 class="section-title">Stages &amp; <em>conversations.</em></h2>
-        <p class="section-lede">Where the work meets the community: from Dreamforce keynotes to civic-tech rooms across Europe and the Gulf.</p>
+        <h2 class="section-title">Events &amp; <em>community.</em></h2>
+        <p class="section-lede">Conferences I've organized or taken part in, with my role at each.</p>
       </div>
     </div>
 
-    <div class="speak-grid">
-      <div class="speak"><div class="speak-event">Dreamforce</div><div class="speak-where">San Francisco</div><div class="speak-year">2018 · 2019 · 2022</div></div>
-      <div class="speak"><div class="speak-event">TrailblazerDX</div><div class="speak-where">San Francisco</div><div class="speak-year">2023 · 2024</div></div>
-      <div class="speak"><div class="speak-event">Albania Dreamin'</div><div class="speak-where">Tirana · Founder</div><div class="speak-year">2020 → ongoing</div></div>
-      <div class="speak"><div class="speak-event">Kosovo Dreamin'</div><div class="speak-where">Pristina · Keynote</div><div class="speak-year">2021</div></div>
-      <div class="speak"><div class="speak-event">UN Internet Governance Forum</div><div class="speak-where">Katowice</div><div class="speak-year">2021</div></div>
-      <div class="speak"><div class="speak-event">World Youth Forum</div><div class="speak-where">Sharm El-Sheikh</div><div class="speak-year">2018 · 2019</div></div>
-      <div class="speak"><div class="speak-event">Open Government Europe</div><div class="speak-where">Rome</div><div class="speak-year">2022</div></div>
-      <div class="speak"><div class="speak-event">LEAP Summit</div><div class="speak-where">Zagreb</div><div class="speak-year">2017 · 2019</div></div>
-      <div class="speak"><div class="speak-event">Spring Meetings: World Bank &amp; IMF</div><div class="speak-where">Washington, DC</div><div class="speak-year">2018</div></div>
-    </div>
+    <table class="events reveal">
+      <thead><tr><th scope="col">Event</th><th scope="col">Place</th><th scope="col">Year</th><th scope="col">Role</th></tr></thead>
+      <tbody>
+        <tr><td>Albania Dreamin'</td><td>Tirana</td><td>2020 to present</td><td><span class="role-tag org">Founder &amp; organizer</span></td></tr>
+        <tr><td>Kosovo Dreamin'</td><td>Pristina</td><td>2021</td><td><span class="role-tag">Participant</span></td></tr>
+        <tr><td>Dreamforce</td><td>San Francisco</td><td>2018 · 2019 · 2022</td><td><span class="role-tag">Participant</span></td></tr>
+        <tr><td>TrailblazerDX</td><td>San Francisco</td><td>2023 · 2024</td><td><span class="role-tag">Participant</span></td></tr>
+        <tr><td>UN Internet Governance Forum</td><td>Katowice</td><td>2021</td><td><span class="role-tag">Participant</span></td></tr>
+        <tr><td>Open Government Europe</td><td>Rome</td><td>2022</td><td><span class="role-tag">Participant</span></td></tr>
+        <tr><td>World Youth Forum</td><td>Sharm El-Sheikh</td><td>2018 · 2019</td><td><span class="role-tag">Participant</span></td></tr>
+        <tr><td>Spring Meetings: World Bank &amp; IMF</td><td>Washington, DC</td><td>2018</td><td><span class="role-tag">Participant</span></td></tr>
+        <tr><td>LEAP Summit</td><td>Zagreb</td><td>2017 · 2019</td><td><span class="role-tag">Participant</span></td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
@@ -933,12 +1020,12 @@ a:focus-visible, button:focus-visible{
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="section-head" style="margin-bottom:0">
-      <div class="section-num">05 / Engage</div>
+      <div class="section-num">05 / Contact</div>
       <div></div>
     </div>
-    <h2>Let's build the <em>system of outcomes.</em></h2>
+    <h2>Get in <em>touch.</em></h2>
     <p class="section-lede" style="max-width:720px">
-      Taking on selective strategic consulting and fractional CRM architecture engagements through LDA Digital Solutions, with a focus on mission-driven, regulated, and scaling organizations.
+      Email is the best way to reach me about my work, speaking or community projects.
     </p>
 
     <div class="contact-grid">
@@ -949,16 +1036,16 @@ a:focus-visible, button:focus-visible{
         <a class="contact-link" href="https://www.linkedin.com/in/marilometa" target="_blank" rel="noopener">linkedin.com/in/marilometa</a>
       </div>
       <div class="contact-block">
-        <h4>Practice &amp; Profile</h4>
-        <a class="contact-link" href="https://ldasolution.com" target="_blank" rel="noopener">ldasolution.com</a>
+        <h4>Profiles &amp; organizations</h4>
         <a class="contact-link" href="https://trailblazer.me/id/mmeta" target="_blank" rel="noopener">trailblazer.me/id/mmeta</a>
+        <a class="contact-link" href="https://ldasolution.com" target="_blank" rel="noopener">ldasolution.com</a>
         <a class="contact-link" href="https://ldaeurope.com" target="_blank" rel="noopener">ldaeurope.com</a>
       </div>
     </div>
 
     <footer>
       <div>© 2026 Marilo Meta · Washington, DC</div>
-      <div>Portfolio · v2026.09</div>
+      <div>Portfolio · v2026.10</div>
     </footer>
   </div>
 </section>
