@@ -641,6 +641,10 @@ h1.name{font-size:clamp(48px,7.5vw,112px);margin-bottom:14px}
 .more-item{background:var(--ink);padding:28px 26px}
 .more-item .case-industry{margin-bottom:10px}
 .more-item p{font-size:15px;line-height:1.65;color:var(--paper)}
+.repo-name{font-family:var(--serif);font-size:21px;letter-spacing:-0.01em;margin-bottom:8px}
+.repo-facts{font-size:14px;color:var(--paper-mute);margin-top:10px;line-height:1.6}
+.repo-link{display:inline-block;margin-top:14px;padding:6px 0;font-family:var(--mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+.repo-link:hover{text-decoration:underline;text-underline-offset:3px}
 
 /* recognition groups */
 .recog-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
@@ -943,6 +947,23 @@ h1.name{font-size:clamp(48px,7.5vw,112px);margin-bottom:14px}
       <div class="more-item reveal reveal-d2"><div class="case-industry">Public sector · Service Cloud</div><p>Brought citizen requests and internal cases for a national public agency into one system, with automated workflows, a self-service portal and an audit trail across departments.</p></div>
       <div class="more-item reveal"><div class="case-industry">Healthcare · Service Cloud</div><p>Built triage automation and referral routing for patient inquiries, with reporting for leadership.</p></div>
       <div class="more-item reveal reveal-d2"><div class="case-industry">Financial services · Sales Cloud</div><p>Consolidated loan data from three systems into Sales Cloud, with automated lead assignment, approval flows, accounting integration and a single dashboard.</p></div>
+    </div>
+    <h3 class="more-title">Code &amp; architecture</h3>
+    <div class="more">
+      <div class="more-item reveal">
+        <div class="case-industry">Public repository · Salesforce Enterprise Edition</div>
+        <div class="repo-name">Salesforce Finance Layer</div>
+        <p>An interim revenue and billing architecture built on Salesforce: invoicing and collections, a live revenue position on every deal, automated revenue recognition schedules and an executive dashboard.</p>
+        <p class="repo-facts">Re-authored case study with no client code or data. Includes architecture notes, design trade-offs, deployable source, Apex tests and a demo setup script.</p>
+        <a class="repo-link" href="https://github.com/marilometa/salesforce-finance-layer" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="more-item reveal reveal-d2">
+        <div class="case-industry">Public repository · Declarative-first</div>
+        <div class="repo-name">Salesforce Revenue Recognition</div>
+        <p>A reference architecture for what happens after Closed Won: projects, deliverables, payment schedules and cash collection forecasting.</p>
+        <p class="repo-facts">Four custom objects and fifteen flows, with no Apex on the revenue path. Anonymized from a production engagement.</p>
+        <a class="repo-link" href="https://github.com/marilometa/salesforce-revenue-recognition" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
     </div>
   </div>
 </section>
