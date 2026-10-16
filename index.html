@@ -640,6 +640,7 @@ h1.name{font-size:clamp(48px,7.5vw,112px);margin-bottom:14px}
 .more-item{background:var(--ink);padding:28px 26px}
 .more-item .case-industry{margin-bottom:10px}
 .more-item p{font-size:15px;line-height:1.65;color:var(--paper)}
+.more-item:last-child:nth-child(odd){grid-column:1/-1}
 .repo-name{font-family:var(--serif);font-size:21px;letter-spacing:-0.01em;margin-bottom:8px}
 .repo-facts{font-size:14px;color:var(--paper-mute);margin-top:10px;line-height:1.6}
 .repo-link{display:inline-block;margin-top:14px;padding:6px 0;font-family:var(--mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);text-decoration:none}
@@ -962,6 +963,13 @@ h1.name{font-size:clamp(48px,7.5vw,112px);margin-bottom:14px}
         <p>A reference architecture for what happens after Closed Won: projects, deliverables, payment schedules and cash collection forecasting.</p>
         <p class="repo-facts">Four custom objects and fifteen flows, with no Apex on the revenue path. Anonymized from a production engagement.</p>
         <a class="repo-link" href="https://github.com/marilometa/salesforce-revenue-recognition" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="more-item reveal">
+        <div class="case-industry">Public repository · Community events</div>
+        <div class="repo-name">Community Conference Kit</div>
+        <p>A Salesforce data model and playbook for running a community-led conference: call for papers with scored reviews, agenda, speakers, sponsorships and volunteer shifts.</p>
+        <p class="repo-facts">Built from organizing a community Salesforce conference every year since 2020. Flows and validation rules, no Apex, with fictional demo data and planning templates.</p>
+        <a class="repo-link" href="https://github.com/marilometa/community-conference-kit" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
     </div>
   </div>
