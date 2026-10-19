@@ -36,5 +36,6 @@ GitHub Pages serves the `main` branch. Every push to `main` redeploys the site, 
 
 - [salesforce-finance-layer](https://github.com/marilometa/salesforce-finance-layer): interim revenue and billing architecture on Salesforce
 - [salesforce-revenue-recognition](https://github.com/marilometa/salesforce-revenue-recognition): reference architecture for the post-Closed Won handoff
+- [community-conference-kit](https://github.com/marilometa/community-conference-kit): data model and playbook for running a community-led conference
 
 © 2026 Marilo Meta
